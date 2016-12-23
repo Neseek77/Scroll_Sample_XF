@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:chatsamplecustom" x:Class="chatsamplecustom.chatsamplecustomPage">
+	<ContentPage.Content>
+
+
+       
+        <StackLayout BackgroundColor = "White" >
+
+        <StackLayout x:Name="blueBar" Padding ="0,0,0,0"  Orientation =" Vertical"  VerticalOptions="EndAndExpand" >
+        	<Button BorderRadius = "1" HeightRequest="10" BackgroundColor="#328FCE" Text=""  ></Button>
+        </StackLayout>
+
+        	<StackLayout x:Name="comx" VerticalOptions = "StartAndExpand" Orientation = "Vertical" BackgroundColor = "White">
+       
+        <StackLayout Padding="0,0,0,0" BackgroundColor="Silver" Orientation="Horizontal">
+					<Image x:Name="accimg" ></Image>
+        <Button x:Name="bbc" BorderRadius="1" FontAttributes="Bold" FontSize="20"  Text="Get in Touch"  HorizontalOptions ="FillAndExpand" 
+          BackgroundColor="Silver" TextColor="White" />
+        </StackLayout>
+
+        <StackLayout x:Name="git">
+        <StackLayout Padding="10,10,0,0"><Label TextColor="Black" Text="Social Media links" FontAttributes="Bold"></Label></StackLayout>
+        <StackLayout x:Name="socialmediagit" Padding="10,10,10,10" Spacing = "5" BackgroundColor = "#f2f2f2" HorizontalOptions="FillAndExpand" Orientation="Horizontal" VerticalOptions = "EndAndExpand" >
+			<Button x:Name="facebook" Text="facebook" TextColor = "White" HorizontalOptions = "FillAndExpand" BorderRadius = "1" BackgroundColor="#3b5998" />
+			<Button x:Name="twitter"  Text=" Twitter " TextColor = "White" HorizontalOptions = "FillAndExpand" BorderRadius = "1" BackgroundColor="#32CCFE" />
+			<Button x:Name="Linkedin" Text="  Linkedin  " TextColor = "White" HorizontalOptions = "FillAndExpand" BorderRadius = "1" BackgroundColor="#0077B5" />
+		</StackLayout>
+
+		<StackLayout Padding="10,10,0,0"><Label TextColor="Black"  BackgroundColor="White" Text="Contact us" FontAttributes="Bold"></Label></StackLayout>
+
+		<StackLayout x:Name = "click" BackgroundColor="#f2f2f2" Padding="30,10,30,10">
+        	<Button x:Name="CallNo" BackgroundColor="#328FCE" BorderRadius = "1" Text="Click to call" TextColor="White" FontAttributes="Bold"></Button>
+        	<Button x:Name="SendEmail" BackgroundColor="#328FCE" BorderRadius = "1" Text="Send an Email" TextColor="White" FontAttributes="Bold"></Button>
+        </StackLayout>
+      	        
+
+	<StackLayout x:Name="form" Orientation = "Vertical" BackgroundColor = "White" Padding="10,0,10,0" >
+		<StackLayout Padding="0,20,0,20">
+		<Label Text="Or Send Us your Question :" FontAttributes="Bold" TextColor="Black" ></Label>
+		</StackLayout>
+        	<StackLayout Orientation="Horizontal">
+        	 	<Entry x:Name="entryfn"  BackgroundColor="#f2f2f2" HorizontalOptions = "FillAndExpand" Placeholder = "Your first name" TextColor="Black" PlaceholderColor = "Gray"  />
+        	</StackLayout>
+        	<StackLayout Orientation="Horizontal">
+        	 	<Entry x:Name="entryln"  BackgroundColor="#f2f2f2" HorizontalOptions = "FillAndExpand" TextColor="Black" Placeholder = "Your last name" PlaceholderColor = "Gray"  />
+        	</StackLayout>
+        	<StackLayout Orientation="Horizontal">
+        	 	<Entry x:Name="entryeid"  BackgroundColor="#f2f2f2" Keyboard="Email" TextColor="Black" HorizontalOptions = "FillAndExpand" Placeholder = "Your e-mail" PlaceholderColor = "Gray" />
+        	</StackLayout>
+        	<StackLayout Orientation="Horizontal">
+        	 	<Entry x:Name="entrysub"  BackgroundColor="#f2f2f2" TextColor="Black" Keyboard="Email" HorizontalOptions = "FillAndExpand" Placeholder = "Subject" PlaceholderColor = "Gray" />
+        	</StackLayout>
+        	<StackLayout Orientation="Horizontal">
+        	 	<Editor x:Name="entrymsg" Text = "Message" BackgroundColor="#f2f2f2" HeightRequest = "200"  Keyboard="Chat" HorizontalOptions = "FillAndExpand" TextColor = "Black" />
+        	</StackLayout>
+        	<StackLayout Orientation="Horizontal">
+        	 	<Entry x:Name="entryphn"  BackgroundColor="#f2f2f2" Keyboard="Numeric" HorizontalOptions = "FillAndExpand" Placeholder = "Your contact number" PlaceholderColor = "Gray" TextColor = "Black" />
+        	</StackLayout>
+						<StackLayout x:Name="call" Padding="10,0,0,0"  BackgroundColor="#f2f2f2" Orientation="Horizontal">
+        	<Label Text = "Request a call" TextColor="Black" WidthRequest = "250" BackgroundColor="#f2f2f2" VerticalOptions="Start"></Label>
+        	<Switch x:Name="switchercall" BackgroundColor="#f2f2f2" VerticalOptions="End" ></Switch>
+        </StackLayout>
+        	<StackLayout x:Name="date" Padding="10,0,0,0"  BackgroundColor="#f2f2f2" Orientation="Horizontal">
+        	<Label Text = "Request an appointment" BackgroundColor="#f2f2f2" TextColor="Black" WidthRequest="250" VerticalOptions="Start"></Label>
+        	<Switch x:Name="switcher"  BackgroundColor="#f2f2f2" VerticalOptions="End" ></Switch>
+        </StackLayout>
+
+        <StackLayout x:Name="datepicker" Padding="10,0,10,0" Orientation="Vertical" HorizontalOptions = "Start">
+        <StackLayout Orientation="Vertical"><Label Text = "Choose a date / time" TextColor="Black" HorizontalTextAlignment="Start"></Label>
+
+	     </StackLayout>
+	       	 <StackLayout Orientation="Horizontal">
+	      		<DatePicker x:Name="pickerdate" HorizontalOptions="End"  BackgroundColor="#328FCE" >
+	         		<DatePicker.Format>yyyy-MM-dd</DatePicker.Format>
+	      		</DatePicker>
+	      		<TimePicker x:Name="timepicker" Format="t" BackgroundColor="#328FCE" >
+	      		</TimePicker>
+	   	</StackLayout>
+							
+	</StackLayout>
+
+         </StackLayout>	
+        	<!--   ///////////////////////////////////////////////////////////////////////// -->
+					<StackLayout x:Name="loadingstack">
+					</StackLayout>
+
+        	<Button x:Name="btnsubmit" Text="Submit" BorderRadius = "1" HeightRequest="40" WidthRequest="80" FontAttributes="Bold" BackgroundColor="#328FCE" TextColor="White" HorizontalOptions="EndAndExpand"/>
+        	<StackLayout Padding="10,20,10,20">
+				<Label Text="If this is an emergency,&#10;Please call 911 &#xA;or&#10;Your local emergency services number immediately." HorizontalTextAlignment = "Center"
+					    VerticalTextAlignment = "Center" FontAttributes="Bold" TextColor="Black" ></Label>
+			</StackLayout>
+        	<StackLayout x:Name="sec1">
+        	 	</StackLayout>
+        </StackLayout>
+       
+        <StackLayout Padding="0,0,0,0" BackgroundColor="Silver" Orientation="Horizontal">
+			<Image x:Name="hrimg" ></Image>
+        <Button x:Name="hrsrc" FontSize="20" BorderRadius="1" Text="HR Resources"
+          BackgroundColor="Silver" FontAttributes="Bold" TextColor="White" HorizontalOptions ="FillAndExpand"/>
+        	</StackLayout>
+				
+        	<StackLayout x:Name="hrmod">
+        	<StackLayout x:Name = "clickhr" Padding = "20,5,20,0">
+        	<Button x:Name="CallNoHR" BorderRadius = "1"  BackgroundColor="#328FCE" Text="Call your Account Manager" TextColor="White" FontAttributes="Bold"></Button>
+        	<Button x:Name="SendEmailHR" BorderRadius = "1" BackgroundColor="#328FCE" Text="Email your Account Manager" TextColor="White" FontAttributes="Bold"></Button>
+        </StackLayout>
+        
+
+        	<StackLayout x:Name="services">
+        	</StackLayout>
+
+
+        	<StackLayout x:Name="sec2">
+        	 	</StackLayout>
+        	</StackLayout>
+        <StackLayout Padding="0,0,0,0" BackgroundColor="Silver" Orientation="Horizontal">
+					<Image x:Name="socialimg" ></Image>
+        <Button x:Name="socialmedia" BorderRadius="1" FontSize="20" Text="Social Media"
+          BackgroundColor="Silver" FontAttributes="Bold" TextColor="White" HorizontalOptions ="FillAndExpand"/>
+        	</StackLayout>
+
+	        	<StackLayout x:Name="feeds" Orientation = "Vertical" BackgroundColor = "White" Padding="10,10,10,10" >
+	        	 	<Label Text="Feeds from various social networks" TextColor="Black" VerticalOptions ="Center" HorizontalOptions="StartAndExpand" ></Label>
+	        	 	<Button x:Name="facebookfeed" Text="Click to view Facebook feed" TextColor = "White" HorizontalOptions = "FillAndExpand" BorderRadius = "1" BackgroundColor="#3b5998" />
+	        	 	<Label x:Name="CommentsLable" Text="Comments" IsVisible="false" TextColor="Black" VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+	        	 	<WebView x:Name="BrowserComment" IsVisible="false" HorizontalOptions="FillAndExpand" HeightRequest="1500"/>
+					<Button x:Name="twitterfeed"  Text=" Click to view Twitter feed " TextColor = "White" HorizontalOptions = "FillAndExpand" BorderRadius = "1" BackgroundColor="#32CCFE" />
+					<Label Text="Tweets" x:Name="TweetsLable" IsVisible="false" TextColor="Black" VerticalOptions="Center" HorizontalOptions="StartAndExpand"></Label>
+					<WebView x:Name="BrowserTweet" IsVisible="false" HorizontalOptions="FillAndExpand" HeightRequest="1500" />
+					<StackLayout x:Name="sec3">
+	        	 	</StackLayout>
+	        	</StackLayout>
+
+	      		<StackLayout x:Name="stack" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" ></StackLayout>
+
+        	</StackLayout>
+         
+    <StackLayout x:Name="sandy">
+		<Frame Padding = "2" BackgroundColor = "#7dc1f0">
+			<StackLayout Spacing = "2" BackgroundColor = "#7dc1f0" HorizontalOptions="FillAndExpand" Orientation="Horizontal" VerticalOptions = "EndAndExpand" >
+				<Entry x:Name="chat"  BackgroundColor="#f2f2f2" HorizontalOptions = "FillAndExpand" Placeholder = "Send Message" TextColor="Black" PlaceholderColor = "Gray" />
+				<Button x:Name="send" Text="   Send   " TextColor="Black" />
+			</StackLayout>
+		</Frame>
+	</StackLayout>
+
+
+
+
+
+</StackLayout>
+
+
+</ContentPage.Content>
+</ContentPage>
